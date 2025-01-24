@@ -4,37 +4,36 @@ import React, { useState, useEffect } from "react";
 //import { Prism as SyntaxHighlighter } from "react-syntax-highlighter"; // Correct import
 // import { prism } from "react-syntax-highlighter/dist/esm/styles/prism";
 import Question from "../components/Question";
-
-
+import quizData from "../src/quizeData";
 
 import StarSky from "../components/SratSky";
 
 
 
-const quizData = [
-  {
-    code: `function myFunction(n) {
-          for (let i = 0; i < n; i++) {
-            console.log(i);
-          }
-        }`,
-    language: "javascript",
-    answers: ["O(1)", "O(n)", "O(n^2)"],
-    correct: 1,
-  },
-  {
-    code: `function anotherFunction(n) {
-          for (let i = 0; i < n; i++) {
-              for(let j = 0; j < n; j++){
-                  console.log(i + j);
-              }
-          }
-        }`,
-    language: "javascript",
-    answers: ["O(1)", "O(n)", "O(n^2)"],
-    correct: 2,
-  },
-];
+// const quizData = [
+//   {
+//     code: `function myFunction(n) {
+//           for (let i = 0; i < n; i++) {
+//             console.log(i);
+//           }
+//         }`,
+//     language: "javascript",
+//     answers: ["O(1)", "O(n)", "O(n^2)"],
+//     correct: 1,
+//   },
+//   {
+//     code: `function anotherFunction(n) {
+//           for (let i = 0; i < n; i++) {
+//               for(let j = 0; j < n; j++){
+//                   console.log(i + j);
+//               }
+//           }
+//         }`,
+//     language: "javascript",
+//     answers: ["O(1)", "O(n)", "O(n^2)"],
+//     correct: 2,
+//   },
+// ];
 
 function App() {
   const [currentQuestionIndex, setCurrentQuestionIndex] = React.useState(0);
