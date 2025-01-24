@@ -1,8 +1,9 @@
 import "./App.css";
 import React, { useState, useEffect } from "react";
-import PropTypes from "prop-types";
-import { Prism as SyntaxHighlighter } from "react-syntax-highlighter"; // Correct import
-import { prism } from "react-syntax-highlighter/dist/esm/styles/prism";
+// import PropTypes from "prop-types";
+//import { Prism as SyntaxHighlighter } from "react-syntax-highlighter"; // Correct import
+// import { prism } from "react-syntax-highlighter/dist/esm/styles/prism";
+import Question from "../components/Question";
 
 const quizData = [
   {
@@ -28,22 +29,6 @@ const quizData = [
     correct: 2,
   },
 ];
-const CodeSnippet = ({ code, language }) => {
-  return (
-    <SyntaxHighlighter language={language} style={prism} wrapLongLines={true}>
-      {code}
-    </SyntaxHighlighter>
-  );
-};
-
-CodeSnippet.propTypes = {
-  code: PropTypes.string.isRequired,
-  language: PropTypes.string.isRequired,
-};
-App.propTypes = {
-  questions: PropTypes.arrayOf(PropTypes.object).isRequired,
-  onAnswer: PropTypes.func.isRequired,
-};
 
 function App() {
   const [currentQuestionIndex, setCurrentQuestionIndex] = React.useState(0);
@@ -72,37 +57,32 @@ function App() {
 
           <div className="score">0 / {quizData.length}</div>
         </header>
-        <main className="question-area">
-          <div className="code-snippet">
-            <CodeSnippet
-              code={currentQuestion.code}
-              language={currentQuestion.language}
-            />
-          </div>
-          <div className="answer-options">
-            {currentQuestion.answers.map((answer, index) => (
-              <button key={index}>{answer}</button>
-            ))}
-          </div>
+        <main>
+          <Question
+            code={currentQuestion.code}
+            language={currentQuestion.language}
+            answers={currentQuestion.answers}
+          />
+
+          <footer className="footer">
+            <button
+              onClick={() =>
+                setCurrentQuestionIndex((prev) => Math.max(0, prev - 1))
+              }
+            >
+              Prev
+            </button>
+            <button
+              onClick={() =>
+                setCurrentQuestionIndex((prev) =>
+                  Math.min(quizData.length - 1, prev + 1)
+                )
+              }
+            >
+              Next
+            </button>
+          </footer>
         </main>
-        <footer className="footer">
-          <button
-            onClick={() =>
-              setCurrentQuestionIndex((prev) => Math.max(0, prev - 1))
-            }
-          >
-            Prev
-          </button>
-          <button
-            onClick={() =>
-              setCurrentQuestionIndex((prev) =>
-                Math.min(quizData.length - 1, prev + 1)
-              )
-            }
-          >
-            Next
-          </button>
-        </footer>
       </div>
     </div>
   );
