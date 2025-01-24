@@ -5,6 +5,12 @@ import React, { useState, useEffect } from "react";
 // import { prism } from "react-syntax-highlighter/dist/esm/styles/prism";
 import Question from "../components/Question";
 
+
+
+import StarSky from "../components/SratSky";
+
+
+
 const quizData = [
   {
     code: `function myFunction(n) {
@@ -48,16 +54,22 @@ function App() {
     setIsDarkMode(!isDarkMode);
   };
 
+ 
   return (
     <div className="wrapper">
+    <StarSky />
       <div className="quiz-container">
+      <h2 className="title">Big O Notation</h2>
         <header className="header">
+    
           <div className="logo">Logo</div>
+         
           <button onClick={toggleTheme}>Toggle Theme</button>
 
           <div className="score">0 / {quizData.length}</div>
         </header>
         <main>
+        <StarSky />
           <Question
             code={currentQuestion.code}
             language={currentQuestion.language}
