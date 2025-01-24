@@ -1,0 +1,124 @@
+:root {
+  --primary-color: #007bff;
+  --secondary-color: #6c757d;
+  --background-color: #fff;
+  --text-color: #000;
+  --border-color: #ccc;
+}
+
+body.dark-mode {
+  --primary-color: #0b5ed7;
+  --secondary-color: #495057;
+  --background-color: #333;
+  --text-color: #eee;
+  --border-color: #555;
+}
+
+body {
+  margin: 0;
+  width: 100vw;
+  min-height: 100vh;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  box-sizing: border-box;
+}
+.wrapper {
+  margin: 1rem;
+  padding-left: 5rem;
+  padding-right: 5rem;
+}
+
+.quiz-container {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto 1fr auto;
+  box-sizing: border-box;
+  grid-template-areas:
+    "header"
+    "question-area"
+    "footer";
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem;
+  border-bottom: 1px solid #ccc;
+  grid-area: header;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.question-area {
+  display: grid;
+  grid-template-rows: auto 1fr;
+  gap: 1rem;
+  padding: 1rem;
+  grid-area: question-area;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.code-snippet {
+  border: 1px solid black var(--border-color);
+  padding: 1rem;
+  box-sizing: border-box;
+}
+
+.code-snippet > * {
+  width: 100%;
+  overflow-x: auto;
+  white-space: pre-wrap;
+  box-sizing: border-box;
+}
+
+.answer-options {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  gap: 1rem;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5rem;
+  border-top: 1px solid var(--border-color);
+  grid-area: footer;
+  padding-top: 2rem;
+}
+
+.btn-primary {
+  background-color: var(--primary-color);
+  color: #fff;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .header {
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
+  .answer-options {
+    grid-template-columns: 1fr;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  .footer {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+  .quiz-container {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr auto;
+    grid-template-areas:
+      "header"
+      "question-area"
+      "footer";
+  }
+} 
