@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter"; // Correct import
 import { prism } from "react-syntax-highlighter/dist/esm/styles/prism";
 //import quizData from '../src/quizeData';
-const Question = ({ code, language, answers, onAnswerClick }) => {
+const Question = ({ code, language, answers, onAnswerClick = ()=>{} }) => {
   return (
     <div>
       <div className="code-snippet">
