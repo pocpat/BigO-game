@@ -1,0 +1,27 @@
+.results{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.results li{
+    margin bottom: 5px;
+    text-align: left;
+}
+.results span {
+    font-weight: bold;
+    color: red;
+}
+.results li.correct {
+    color: green;
+  }
+  
+  .results li.incorrect {
+    color: red;
+  }
+.results h2{
+    margin-bottom: 10px;
+}

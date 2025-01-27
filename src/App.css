@@ -113,6 +113,15 @@ button { /* This selector targets ALL buttons */
   cursor: pointer; /* Make it look clickable */
 }
 
+.answer-button.correct {
+  background-color: #28a745; 
+  color: white;
+}
+
+.answer-button.incorrect {
+  background-color: #dc3545; 
+  color: white;
+}
 /* Responsive adjustments */
 @media (max-width: 768px) {
   .header {

@@ -63,6 +63,7 @@ function App() {
               language={currentQuestion.language}
               answers={currentQuestion.answers}
               onAnswerClick={handleNextQuestion}
+              correctAnswerIndex={currentQuestion.correct}
             />
           ) : (
             <Result
@@ -70,6 +71,24 @@ function App() {
               resetQuiz={resetQuiz}
             />
           )}
+          <footer className="footer">
+          <button
+            onClick={() =>
+              setCurrentQuestionIndex((prev) => Math.max(0, prev - 1))
+            }
+          >
+            Prev
+          </button>
+          <button
+            onClick={() =>
+              setCurrentQuestionIndex((prev) =>
+                Math.min(quizData.length - 1, prev + 1)
+              )
+            }
+          >
+            Next
+          </button>
+        </footer>
         </main>
       </div>
     </div>

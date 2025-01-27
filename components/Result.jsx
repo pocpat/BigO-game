@@ -1,8 +1,9 @@
     /* eslint-disable react/prop-types*/
     
     import quizData from '../src/quizeData'
+    import './results.css'
     
-    const Result = ({userAnswers, code, resetQuiz =()=>{}}) => {
+    const Result = ({userAnswers, resetQuiz =()=>{}}) => {
         const calculateScore = userAnswers.filter(answer => answer).length; 
       return (
         
@@ -10,8 +11,8 @@
     <h2>Quiz Finished!</h2>
     <p>You scored {calculateScore} out of {quizData.length}.</p>
     <ul>
-      {userAnswers.map((isCorrect, index) => (
-        <li key={index}>
+    {userAnswers.map((isCorrect, index) => (
+        <li key={index} className={isCorrect ? 'correct' : 'incorrect'}>
           Question {index + 1}: {isCorrect ? "Correct" : "Incorrect"}
         </li>
       ))}
