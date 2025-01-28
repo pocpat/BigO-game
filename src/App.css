@@ -5,6 +5,7 @@
   --text-color: #000; /* Black */
   --border-color: rgb(78, 98, 119);
   --box-shadow:  rgba(0, 0, 0, 0.35);
+  --progress-bar: rgba(78, 98, 119, 0.5);
 }
 
 body.dark-mode {
@@ -14,6 +15,7 @@ body.dark-mode {
   --text-color: #eee; /* Light gray */
   --border-color:rgb(163, 207, 255);
   --box-shadow:  rgba(255, 255, 255, 0.34);
+  --progress-bar: rgba(163, 207, 255, 0.5);
 }
 body {
   margin: 0;

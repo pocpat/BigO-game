@@ -5,13 +5,14 @@ import quizData from "./quizeData";
 import Question from "../components/Question";
 import StarSky from "../components/SratSky";
 import Result from "../components/Result";
+import ProgressBar from "../components/ProgressBar";
 
 function App() {
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
   const currentQuestion = quizData[currentQuestionIndex];
   const [userAnswers, setUserAnswers] = useState([]);
   const [isDarkMode, setIsDarkMode] = useState(false);
-
+  const progress = ((currentQuestionIndex + 1) / quizData.length) * 100;
   useEffect(() => {
     if (isDarkMode) {
       document.body.classList.add("dark-mode");
@@ -47,14 +48,15 @@ function App() {
       <div className="quiz-container">
         <header className="header">
           <div className="logo">Logo</div>
-          <button onClick={toggleTheme}>Toggle Theme</button>
-          <div className="score">
-            {currentQuestionIndex + 1} / {quizData.length}
-          </div>
-          <h5>Display score</h5>
           <div className="score">
             {calculateScore()} / {quizData.length}
           </div>
+          <button onClick={toggleTheme}>Toggle Theme</button>
+        {/*  <div className="score">
+            {currentQuestionIndex + 1} / {quizData.length}
+          </div> */}
+         
+          
         </header>
         <main>
           {currentQuestionIndex < quizData.length ? (
@@ -72,7 +74,10 @@ function App() {
             />
           )}
           <footer className="footer">
-          <button
+         < ProgressBar progress={progress}/>
+         <p>{currentQuestionIndex + 1} / {quizData.length}</p>
+         
+         {/*  <button
             onClick={() =>
               setCurrentQuestionIndex((prev) => Math.max(0, prev - 1))
             }
@@ -87,7 +92,7 @@ function App() {
             }
           >
             Next
-          </button>
+          </button> */}
         </footer>
         </main>
       </div>
