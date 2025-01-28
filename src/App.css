@@ -80,6 +80,7 @@ body {
   border: 1px solid black var(--border-color);
   padding: 1rem;
   box-sizing: border-box;
+ 
 }
 
 .code-snippet > * {
@@ -87,6 +88,7 @@ body {
   overflow-x: auto;
   white-space: pre-wrap;
   box-sizing: border-box;
+  height: 300px;
 }
 
 .answer-options {

@@ -12,7 +12,7 @@ function App() {
   const currentQuestion = quizData[currentQuestionIndex];
   const [userAnswers, setUserAnswers] = useState([]);
   const [isDarkMode, setIsDarkMode] = useState(false);
-  const progress = ((currentQuestionIndex + 1) / quizData.length) * 100;
+  const progress = ((currentQuestionIndex ) / quizData.length) * 100;
   useEffect(() => {
     if (isDarkMode) {
       document.body.classList.add("dark-mode");
@@ -75,7 +75,7 @@ function App() {
           )}
           <footer className="footer">
          < ProgressBar progress={progress}/>
-         <p>{currentQuestionIndex + 1} / {quizData.length}</p>
+        
          
          {/*  <button
             onClick={() =>
