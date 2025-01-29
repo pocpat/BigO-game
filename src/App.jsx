@@ -6,13 +6,17 @@ import Question from "../components/Question";
 import StarSky from "../components/SratSky";
 import Result from "../components/Result";
 import ProgressBar from "../components/ProgressBar";
+import Welcome from "../components/Welcome";
 
 function App() {
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
   const currentQuestion = quizData[currentQuestionIndex];
   const [userAnswers, setUserAnswers] = useState([]);
   const [isDarkMode, setIsDarkMode] = useState(false);
+  const [mode, setMode] = useState(null); // Track the selected mode
+  const [isAnswerCorrect, setIsAnswerCorrect] = useState(false); // Track if the answer is correct
   const progress = (currentQuestionIndex / quizData.length) * 100;
+
   useEffect(() => {
     if (isDarkMode) {
       document.body.classList.add("dark-mode");
@@ -28,7 +32,13 @@ function App() {
   const handleNextQuestion = (selectedAnswerIndex) => {
     const isCorrect = selectedAnswerIndex === currentQuestion.correct;
     setUserAnswers((prev) => [...prev, isCorrect]);
-    setCurrentQuestionIndex((prev) => Math.min(quizData.length, prev + 1));
+
+    if (mode === "normal" || isCorrect) {
+      setCurrentQuestionIndex((prev) => Math.min(quizData.length, prev + 1));
+      setIsAnswerCorrect(false); // Reset answer correctness for the next question
+    } else {
+      setIsAnswerCorrect(true); // Indicate that the answer is correct
+    }
   };
 
   const calculateScore = () => {
@@ -38,7 +48,19 @@ function App() {
   const resetQuiz = () => {
     setCurrentQuestionIndex(0);
     setUserAnswers([]);
+    setIsAnswerCorrect(false); // Reset answer correctness
+
+    
   };
+
+  const handleSelectMode = (selectedMode) => {
+    setMode(selectedMode);
+    resetQuiz(); // Reset quiz when mode changes
+  };
+
+  if (!mode) {
+    return <Welcome onSelectMode={handleSelectMode} />;
+  }
 
   return (
     <div className="wrapper">
@@ -47,15 +69,14 @@ function App() {
       <h2 className="title">Big O Notation Quiz</h2>
       <div className="quiz-container">
         <header className="header">
-          <div >
-          <img className="logo" src="../public/ekLogo.png" alt="logo" />
+          <div>
+            <img className="logo" src="../public/ekLogo.png" alt="logo" />
           </div>
           <div className="score">
             {calculateScore()} / {quizData.length}
           </div>
 
-          {/*  new toggle button */}
-
+          {/* new toggle button */}
           <input type="checkbox" id="darkmode-toggle" />
           <label htmlFor="darkmode-toggle" onClick={toggleTheme}>
             <svg
@@ -126,20 +147,33 @@ function App() {
           </label>
         </header>
         <main>
-          {currentQuestionIndex < quizData.length ? (
-            <Question
-              code={currentQuestion.code}
-              language={currentQuestion.language}
-              answers={currentQuestion.answers}
-              onAnswerClick={handleNextQuestion}
-              correctAnswerIndex={currentQuestion.correct}
-            />
-          ) : (
+        {currentQuestionIndex < quizData.length ? (
+          <Question
+            code={currentQuestion.code}
+            language={currentQuestion.language}
+            answers={currentQuestion.answers}
+            onAnswerClick={handleNextQuestion}
+            correctAnswerIndex={currentQuestion.correct}
+          />
+        ) : (
+          mode === "normal" ? (
+            <div>
             <Result userAnswers={userAnswers} resetQuiz={resetQuiz} />
-          )}
-          <footer className="footer">
-            <ProgressBar progress={progress} />
-          </footer>
+            <button onClick={() => setMode(null)}>Back to Welcome</button>
+          </div>
+            
+            
+          ) : (
+            <div className="greeting">
+              <h2>Yey, you did it!</h2>
+              <button onClick={resetQuiz}>Play Again</button>
+              <button onClick={() => setMode(null)}>Back to Welcome</button>
+            </div>
+          )
+        )}
+        <footer className="footer">
+          <ProgressBar progress={progress} />
+        </footer>
         </main>
       </div>
     </div>
@@ -148,29 +182,5 @@ function App() {
 
 export default App;
 
-// ==============================
 
-{
-  /*  <div className="score">
-            {currentQuestionIndex + 1} / {quizData.length}
-          </div> */
-}
 
-{
-  /*  <button
-            onClick={() =>
-              setCurrentQuestionIndex((prev) => Math.max(0, prev - 1))
-            }
-          >
-            Prev
-          </button>
-          <button
-            onClick={() =>
-              setCurrentQuestionIndex((prev) =>
-                Math.min(quizData.length - 1, prev + 1)
-              )
-            }
-          >
-            Next
-          </button> */
-}
