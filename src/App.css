@@ -35,6 +35,14 @@ body {
   padding-right: 5rem;
 }
 
+.logo{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+ 
+  width: auto;
+  height: 40px;
+}
 .quiz-container {
   display: grid;
   gap: 1rem;
