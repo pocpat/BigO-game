@@ -158,3 +158,19 @@ button { /* This selector targets ALL buttons */
       "footer";
   }
 } 
+
+body, #root {
+  width: 100%;
+  max-width: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+/* Add media query for mobile devices */
+@media (max-width: 600px) {
+  body, #root {
+    width: 100%;
+    max-width: 100%;
+  }
+}
