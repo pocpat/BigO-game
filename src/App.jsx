@@ -178,6 +178,9 @@ function App() {
   if (!mode) {
     return <Welcome onSelectMode={handleSelectMode} isDarkMode={isDarkMode} toggleTheme={toggleTheme} />;
   }
+  const handleLogoClick = () => {
+    setMode(null); //set mode to null to show welcome page
+  };
 
   return (
     <div className="wrapper">
@@ -186,8 +189,8 @@ function App() {
       <h2 className="title">Big O Notation</h2>
       <div className="quiz-container">
         <header className="header">
-          <div>
-            <img className="logo" src="/ekLogo.png" alt="logo" />
+          <div onClick={handleLogoClick} title="home">
+            <img className="logo" src="/ekLogo.png" alt="logo"  />
           </div>
           <div className="score">
           {mode === "normal" && `${calculateScore()} / ${quizData.length}`}
@@ -209,16 +212,19 @@ function App() {
            mode === "normal" ? (
             <div>
             <Result userAnswers={userAnswers} resetQuiz={resetQuiz} />
-            <button onClick={() => setMode(null)}>Back to Welcome</button>
+            <button className="restarts" onClick={() => setMode(null)}>Back to Home</button>
           </div>
             
             
           ) : (
-            <div className="greeting">
-              <h2>Yey, you did it!</h2>
+            
+              
+              <div className="restarts greeting">
+              <h2 className="center-text">Yey, you did it!</h2>
               <button onClick={resetQuiz}>Play Again</button>
-              <button onClick={() => setMode(null)}>Back to Welcome</button>
+              <button onClick={() => setMode(null)}>Back to Home</button>
             </div>
+            
           )
         )}
         <footer className="footer">
