@@ -25,9 +25,7 @@ const quizData = [
     code: `int sum = 0;
 for (int i = 0; i < n; i++) {
     sum += i;
-}
-
-          `,
+} `,
     language: "javascript",
     answers: ["O(1)", "O(n)", "O(n^2)"],
     correct: 2,
@@ -35,8 +33,7 @@ for (int i = 0; i < n; i++) {
   {
     code: `for (int i = 0; i < 2 * n; i++) {
     // some operation
-}
- `,
+}`,
     language: "javascript",
     answers: ["O(2N)", "O(N)", "O(N^2)"],
     correct: 0,
@@ -48,28 +45,25 @@ for (int i = 0; i < n; i++) {
         sum += i;
     }
     console.log("Sum: " + sum);}
-identifyComplexity(10);
-
- `,
+identifyComplexity(10);`,
     language: "javascript",
     answers: ["O(1)", "O(N)", "O(N^2 )"],
     correct: 1,
   },
   {
-    code: ` function dropConstants(n) {
+    code: `function dropConstants(n) {
     for (let i = 0; i < 2 * n; i++) {
         // some operation
     }
 }
-dropConstants(10);
- `,
+dropConstants(10);`,
     language: "javascript",
     answers: ["O(2N)", "O(N)", "O(N^2)"],
     correct: 1,
   },
 
   {
-    code: ` function identifyComplexityAdvanced(n) {
+    code: `function identifyComplexityAdvanced(n) {
     let sum = 0;
     for (let i = 0; i < n; i++) {
         for (let j = 0; j < 10; j++) {
@@ -79,16 +73,13 @@ dropConstants(10);
     console.log("Sum: " + sum);
 }
 
-identifyComplexityAdvanced(10);
-
-
- `,
+identifyComplexityAdvanced(10);`,
     language: "javascript",
     answers: ["O(1)", "O(N)", "O(N^2)"],
     correct: 1,
   },
   {
-    code: ` function dropConstantsAdvanced(n) {
+    code: `function dropConstantsAdvanced(n) {
     for (let i = 0; i < 3 * n; i++) {
         // some operation
     }
@@ -97,16 +88,14 @@ identifyComplexityAdvanced(10);
     }
 }
 
-dropConstantsAdvanced(10);
-
- `,
+dropConstantsAdvanced(10);`,
     language: "javascript",
     answers: ["O(5N)", "O(N)", "O(N^2)"],
     correct: 1,
   },
 
   {
-    code: ` function identifyComplexityIntermediate(n) {
+    code: `function identifyComplexityIntermediate(n) {
     let sum = 0;
     for (let i = 0; i < n; i++) {
         sum += i;
@@ -117,15 +106,13 @@ dropConstantsAdvanced(10);
     console.log("Sum: " + sum);
 }
 
-identifyComplexityIntermediate(10);
-
- `,
+identifyComplexityIntermediate(10);`,
     language: "javascript",
     answers: ["O(1)", "O(N)", "O(N^2)"],
     correct: 1,
   },
   {
-    code: ` function dropConstantsIntermediate(n) {
+    code: `function dropConstantsIntermediate(n) {
     for (let i = 0; i < 4 * n; i++) {
         // some operation
     }
@@ -134,17 +121,14 @@ identifyComplexityIntermediate(10);
     }
 }
 
-dropConstantsIntermediate(10);
-
- `,
+dropConstantsIntermediate(10);`,
     language: "javascript",
     answers: ["O(7N)", "O(N)", "O(N^2)"],
     correct: 1,
   },
 
   {
-    code: ` 
-    function identifyComplexityAdvanced2(n) {
+    code: `function identifyComplexityAdvanced2(n) {
     let sum = 0;
     for (let i = 0; i < n; i++) {
         for (let j = 0; j < n; j++) {
@@ -157,16 +141,13 @@ dropConstantsIntermediate(10);
     console.log("Sum: " + sum);
 }
 
-identifyComplexityAdvanced2(10);
-
- `,
+identifyComplexityAdvanced2(10); `,
     language: "javascript",
     answers: ["O(1)", "O(N)", "O(N^2)"],
     correct: 2,
   },
   {
-    code: ` 
-    function dropConstantsAdvanced2(n) {
+    code: `function dropConstantsAdvanced2(n) {
     for (let i = 0; i < 5 * n; i++) {
         // some operation
     }
@@ -175,16 +156,13 @@ identifyComplexityAdvanced2(10);
     }
 }
 
-dropConstantsAdvanced2(10);
-
- `,
+dropConstantsAdvanced2(10); `,
     language: "javascript",
     answers: ["O(9N)", "O(N)", "O(N^2)"],
     correct: 1,
   },
   {
-    code: ` 
-    function identifyComplexityIntermediate2(n) {
+    code: `function identifyComplexityIntermediate2(n) {
     let sum = 0;
     for (let i = 0; i < n; i++) {
         sum += i;
@@ -195,17 +173,13 @@ dropConstantsAdvanced2(10);
     console.log("Sum: " + sum);
 }
 
-identifyComplexityIntermediate2(10);
-
-
- `,
+identifyComplexityIntermediate2(10); `,
     language: "javascript",
     answers: ["O(1)", "O(N)", "O(N^2)"],
     correct: 2,
   },
   {
-    code: ` 
-    function dropConstantsIntermediate2(n) {
+    code: `function dropConstantsIntermediate2(n) {
     for (let i = 0; i < 6 * n; i++) {
         // some operation
     }
@@ -214,17 +188,13 @@ identifyComplexityIntermediate2(10);
     }
 }
 
-dropConstantsIntermediate2(10);
-
-
- `,
+dropConstantsIntermediate2(10); `,
     language: "javascript",
     answers: ["O(10N)", "O(N)", "O(N^2)"],
     correct: 1,
   },
   {
-    code: ` 
-    function identifyComplexityAdvanced3(n) {
+    code: `function identifyComplexityAdvanced3(n) {
     let sum = 0;
     for (let i = 0; i < n; i++) {
         for (let j = 0; j < n; j++) {
@@ -495,12 +465,7 @@ return fib(n - 1) + fib(n - 2);
     correct: 0,
   },
   {
-    code: ` 
-    function sqrt(n) {
-  return sqrtHelper(n, 1, n);
-}
-
-function sqrtHelper(n, min, max) {
+    code: ` function sqrtHelper(n, min, max) {
   if (max < min) return -1; // no square root
   const guess = Math.floor((min + max) / 2);
   if (guess * guess === n) { // found it!
@@ -510,8 +475,7 @@ function sqrtHelper(n, min, max) {
   } else {
     return sqrtHelper(n, min, guess - 1); // try lower
   }
-}
- `,
+} `,
     language: "javascript",
     answers: ["O(log N)", "O(N)", "O(N^2)"],
     correct: 0,
@@ -787,50 +751,44 @@ compareAlgorithmsAdvanced6(10);
   },
   {
     code: ` 
-// If a binary search tree is not balanced, how long might it take (worst case) to find an element in it?
+// If a binary search tree is not balanced, 
+// how long might it take (worst case) 
+// to find an element in it?
  `,
     language: "javascript",
     answers: ["O(1)", "O(N)", "O(N^2)"],
     correct: 1,
   },
   {
-    code: ` 
-// You are looking for a specific value in a binary tree, but the tree is not a binary search tree.
-What is the time complexity of this?
-
- `,
+    code: `{/*
+You are looking for a specific 
+value in a binary tree, 
+but the tree is not 
+a binary search tree.
+What is the time complexity 
+of this?
+*/}`,
     language: "javascript",
     answers: ["O(1)", "O(N)", "O(N^2)"],
     correct: 1,
   },
   {
-    code: ` 
-
- `,
-    language: "javascript",
-    answers: ["O()", "O(N)", "O(N^2)"],
-    correct: 1,
-  },
-  {
-    code: ` 
-
- `,
-    language: "javascript",
-    answers: ["O()", "O(N)", "O(N^2)"],
-    correct: 1,
-  },
-  {
-    code: ` 
-// The appendToNew method appends a value to an array by creating a new, longer array and
-returning this longer array. You've used the appendToNew method to create a copyArray
-function that repeatedly calls appendToNew. How long does copying an array take?
-
- `,
+    code: `{/*
+The appendToNew method appends 
+a value to an array by creating 
+a new, longer array and
+returning this longer array. 
+You've used the appendToNew 
+method to create a copyArray
+function that repeatedly 
+calls appendToNew. 
+How long does copying 
+an array take?
+*/}`,
     language: "javascript",
     answers: ["O(1)", "O(N)", "O(N^2)"],
     correct: 2,
-  }
-
+  },
 ];
 
 export default quizData;

@@ -118,7 +118,7 @@
 import { useState, useEffect } from "react";
 import "./App.css";
 import "./toggle.css";
-import quizData from "./quizeData";
+import quizData from "./quizData.json";
 import Question from "../components/Question";
 import StarSky from "../components/SratSky";
 import Result from "../components/Result";
@@ -212,7 +212,9 @@ function App() {
            mode === "normal" ? (
             <div>
             <Result userAnswers={userAnswers} resetQuiz={resetQuiz} />
-            <button className="restarts" onClick={() => setMode(null)}>Back to Home</button>
+            <div className="restarts greeting">
+            <button className="restarts greeting" onClick={() => setMode(null)}>Back to Home</button>
+            </div>
           </div>
             
             

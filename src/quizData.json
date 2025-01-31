@@ -1,0 +1,512 @@
+[
+    {
+      "code": "function myFunction(n) {\n  for (let i = 0; i < n; i++) {\n    console.log(i);\n  }\n}",
+      "language": "javascript",
+      "answers": [
+        "O(1)",
+        "O(n)",
+        "O(n^2)"
+      ],
+      "correct": 1
+    },
+    {
+      "code": "function anotherFunction(n) {\n  for (let i = 0; i < n; i++) {\n    for(let j = 0; j < n; j++){\n      console.log(i + j);\n    }\n  }\n}",
+      "language": "javascript",
+      "answers": [
+        "O(1)",
+        "O(n)",
+        "O(n^2)"
+      ],
+      "correct": 2
+    },
+    {
+      "code": "let sum = 0;\nfor (let i = 0; i < n; i++) {\n  sum += i;\n}",
+      "language": "javascript",
+      "answers": [
+        "O(1)",
+        "O(n)",
+        "O(n^2)"
+      ],
+      "correct": 1
+    },
+    {
+      "code": "for (let i = 0; i < 2 * n; i++) {\n  // some operation\n}",
+      "language": "javascript",
+      "answers": [
+        "O(2N)",
+        "O(N)",
+        "O(N^2)"
+      ],
+      "correct": 1
+    },
+    {
+      "code": "function identifyComplexity(n) {\n  let sum = 0;\n  for (let i = 0; i < n; i++) {\n    sum += i;\n  }\n  console.log(\"Sum: \" + sum);\n}",
+      "language": "javascript",
+      "answers": [
+        "O(1)",
+        "O(N)",
+        "O(N^2)"
+      ],
+      "correct": 1
+    },
+    {
+      "code": "function dropConstants(n) {\n  for (let i = 0; i < 2 * n; i++) {\n  // some operation\n    }\n}",
+      "language": "javascript",
+      "answers": [
+        "O(2N)",
+        "O(N)",
+        "O(N^2)"
+      ],
+      "correct": 1
+    },
+    {
+      "code": "function identifyComplexityAdvanced(n) {\n  let sum = 0;\n  for (let i = 0; i < n; i++) {\n    for (let j = 0; j < 10; j++) {\n      sum += i * j;\n    }\n  }\n  console.log(\"Sum: \" + sum);\n}",
+      "language": "javascript",
+      "answers": [
+        "O(1)",
+        "O(N)",
+        "O(N^2)"
+      ],
+      "correct": 1
+    },
+    {
+      "code": "function dropConstantsAdvanced(n) {\n  for (let i = 0; i < 3 * n; i++) {\n    // some operation\n  }\n  for (let j = 0; j < 2 * n; j++) {\n    // some operation\n  }\n}",
+      "language": "javascript",
+      "answers": [
+        "O(5N)",
+        "O(N)",
+        "O(N^2)"
+      ],
+      "correct": 1
+    },
+    {
+      "code": "function identifyComplexityIntermediate(n) {\n    let sum = 0;\n    for (let i = 0; i < n; i++) {\n        sum += i;\n    }\n    for (let j = 0; j < n; j++) {\n        sum += j;\n    }\n    console.log(\"Sum: \" + sum);\n    }",
+      "language": "javascript",
+      "answers": [
+        "O(1)",
+        "O(N)",
+        "O(N^2)"
+      ],
+      "correct": 1
+    },
+    {
+      "code": "function dropConstantsIntermediate(n) {\n    for (let i = 0; i < 4 * n; i++) {\n        // some operation\n    }\n    for (let j = 0; j < 3 * n; j++) {\n        // some operation\n    }\n}",
+      "language": "javascript",
+      "answers": [
+        "O(7N)",
+        "O(N)",
+        "O(N^2)"
+      ],
+      "correct": 1
+    },
+    {
+      "code": "function identifyComplexityAdvanced2(n) {\n    let sum = 0;\n    for (let i = 0; i < n; i++) {\n        for (let j = 0; j < n; j++) {\n            sum += i * j;\n        }\n    }\n    for (let k = 0; k < n; k++) {\n        sum += k;\n    }\n    console.log(\"Sum: \" + sum);\n}",
+      "language": "javascript",
+      "answers": [
+        "O(1)",
+        "O(N)",
+        "O(N^2)"
+      ],
+      "correct": 2
+    },
+    {
+      "code": "function dropConstantsAdvanced2(n) {\n    for (let i = 0; i < 5 * n; i++) {\n      // some operation\n    }\n    for (let j = 0; j < 4 * n; j++) {\n      // some operation\n    }\n}",
+      "language": "javascript",
+      "answers": [
+        "O(9N)",
+        "O(N)",
+        "O(N^2)"
+      ],
+      "correct": 1
+    },
+    {
+      "code": "function identifyComplexityIntermediate2(n) {\n    let sum = 0;\n    for (let i = 0; i < n; i++) {\n        sum += i;\n    }\n    for (let j = 0; j < n * n; j++) {\n        sum += j;\n    }\n    console.log(\"Sum: \" + sum);\n}",
+      "language": "javascript",
+      "answers": [
+        "O(1)",
+        "O(N)",
+        "O(N^2)"
+      ],
+      "correct": 2
+    },
+    {
+      "code": "function dropConstantsIntermediate2(n) {\n    for (let i = 0; i < 6 * n; i++) {\n      // some operation\n    }\n    for (let j = 0; j < 4 * n; j++) {\n      // some operation\n    }\n}",
+      "language": "javascript",
+      "answers": [
+        "O(10N)",
+        "O(N)",
+        "O(N^2)"
+      ],
+      "correct": 1
+    },
+    {
+      "code": "function identifyComplexityAdvanced3(n) {\n    let sum = 0;\n    for (let i = 0; i < n; i++) {\n        for (let j = 0; j < n; j++) {\n            sum += i * j;\n        }\n    }\n    for (let k = 0; k < n; k++) {\n        sum += k;\n    }\n    console.log(\"Sum: \" + sum);\n}",
+      "language": "javascript",
+      "answers": [
+        "O(1)",
+        "O(N)",
+        "O(N^2)"
+      ],
+      "correct": 2
+    },
+    {
+      "code": "function dropConstantsAdvanced3(n) {\n    for (let i = 0; i < 7 * n; i++) {\n      // some operation\n    }\n    for (let j = 0; j < 5 * n; j++) {\n      // some operation\n    }\n}",
+      "language": "javascript",
+      "answers": [
+        "O(12N)",
+        "O(N)",
+        "O(N^2)"
+      ],
+      "correct": 1
+    },
+    {
+      "code": "function printUnorderedPairs(arrayA, arrayB) {\n  if (!Array.isArray(arrayA) || !Array.isArray(arrayB)) {\n    console.error(\"Inputs must be arrays.\");\n    return;\n  }\n  \n  for (let i = 0; i < arrayA.length; i++) {\n    for (let j = 0; j < arrayB.length; j++) {\n      for (let k = 0; k < 160800; k++) {\n        console.log(arrayA[i] + \",\" + arrayB[j]);\n      }\n    }\n  }\n}",
+      "language": "javascript",
+      "answers": [
+        "O(AB)",
+        "O(N)",
+        "O(N^2)"
+      ],
+      "correct": 0
+    },
+    {
+      "code": "function reverse(array) {\n  if (!Array.isArray(array)) {\n    console.error(\"Input must be an array.\");\n    return;\n  }\n\n  for (let i = 0; i < Math.floor(array.length / 2); i++) {\n    let other = array.length - i - 1;\n    let temp = array[i];\n    array[i] = array[other];\n    array[other] = temp;\n}\n}",
+      "language": "javascript",
+      "answers": [
+        "O(1)",
+        "O(N)",
+        "O(N^2)"
+      ],
+      "correct": 1
+    },
+    {
+      "code": "function sum(node) {\n  if (node === null || node === undefined) { // Check for both null and undefined\n    return 0;\n  }\n  return sum(node.left) + node.value + sum(node.right);\n}",
+      "language": "javascript",
+      "answers": [
+        "O(1)",
+        "O(N)",
+        "O(N^2)"
+      ],
+      "correct": 1
+    },
+    {
+      "code": "function isPrime(n) {\n  if (n <= 1) return false;\n  for (let x = 2; x <= Math.sqrt(n); x++) {\n    if (n % x === 0) {\n      return false;\n}\n}\n  return true;\n}",
+      "language": "javascript",
+      "answers": [
+        "O(1)",
+        "O(N)",
+        "O(sqrt(n))"
+      ],
+      "correct": 2
+    },
+    {
+      "code": "function factorial(n) {\n  if (n < 0) {\n    return -1;\n} else if (n === 0) {\n    return 1;\n} else {\n    return n * factorial(n - 1);\n}\n}",
+      "language": "javascript",
+      "answers": [
+        "O(1)",
+        "O(N)",
+        "O(N^2)"
+      ],
+      "correct": 1
+    },
+    {
+      "code": "function fib(n) {\n  if (n <= 0) return 0;\n  else if (n === 1) return 1;\n  return fib(n - 1) + fib(n - 2);\n}",
+      "language": "javascript",
+      "answers": [
+        "O(1)",
+        "O(N)",
+        "O(2^N)"
+      ],
+      "correct": 2
+    },
+    {
+      "code": "function allFib(n) {\nfor (let i = 0; i < n; i++) {\nconsole.log(i + \": \" + fib(i));\n}\n}",
+      "language": "javascript",
+      "answers": [
+        "O(N*2^N)",
+        "O(N)",
+        "O(N^2)"
+      ],
+      "correct": 0
+    },
+    {
+      "code": "function fib(n) {\nif (n <= 0) return 0;\nelse if (n === 1) return 1;\nreturn fib(n - 1) + fib(n - 2);\n}",
+      "language": "javascript",
+      "answers": [
+        "O(2^N)",
+        "O(N)",
+        "O(N^2)"
+      ],
+      "correct": 0
+    },
+    {
+      "code": "function allFib(n) {\n  const memo = new Array(n + 1).fill(0);\n  for (let i = 0; i < n; i++) {\n    console.log(i + \": \" + fib(i, memo));\n}\n}",
+      "language": "javascript",
+      "answers": [
+        "O(1)",
+        "O(N)",
+        "O(N^2)"
+      ],
+      "correct": 1
+    },
+    {
+      "code": "function fib(n, memo) {\n  if (n <= 0) return 0;\n  else if (n === 1) return 1;\n  else if (memo[n] > 0) return memo[n];\n\n  memo[n] = fib(n - 1, memo) + fib(n - 2, memo);\n  return memo[n];\n}",
+      "language": "javascript",
+      "answers": [
+        "O(1)",
+        "O(N)",
+        "O(N^2)"
+      ],
+      "correct": 1
+    },
+    {
+      "code": "function powersOf2(n) {\n  if (n < 1) {\n    return 0;\n} else if (n === 1) {\n    console.log(1);\n    return 1;\n} else {\n    let prev = powersOf2(Math.floor(n / 2));\n    let curr = prev * 2;\n    console.log(curr);\n    return curr;\n}\n}",
+      "language": "javascript",
+      "answers": [
+        "O(logN)",
+        "O(N)",
+        "O(N^2)"
+      ],
+      "correct": 0
+    },
+    {
+      "code": "function product(a, b) {\n  let sum = 0;\n  for (let i = 0; i < b; i++) {\n    sum += a;\n}\n  return sum;\n}",
+      "language": "javascript",
+      "answers": [
+        "O(b)",
+        "O(N)",
+        "O(N^2)"
+      ],
+      "correct": 0
+    },
+    {
+      "code": "function power(a, b) {\n  if (b < 0) {\n    return 0;\n} else if (b === 0) {\n    return 1;\n} else {\n    return a * power(a, b - 1);\n}\n}",
+      "language": "javascript",
+      "answers": [
+        "O(b)",
+        "O(N)",
+        "O(N^2)"
+      ],
+      "correct": 0
+    },
+    {
+      "code": "function mod(a, b) {\n  if (b <= 0) {\n    return -1;\n}\n  const div = Math.floor(a / b);\n  return a - div * b;\n}",
+      "language": "javascript",
+      "answers": [
+        "O(1)",
+        "O(N)",
+        "O(N^2)"
+      ],
+      "correct": 0
+    },
+    {
+      "code": "function div(a, b) {\n  let count = 0;\n  let sum = b;\n  while (sum <= a) {\n    sum += b;\n    count++;\n}\n  return count;\n}",
+      "language": "javascript",
+      "answers": [
+        "O(a/b)",
+        "O(N)",
+        "O(N^2)"
+      ],
+      "correct": 0
+    },
+    {
+      "code": " function sqrtHelper(n, min, max) {\n  if (max < min) return -1; // no square root\n  const guess = Math.floor((min + max) / 2);\n  if (guess * guess === n) { // found it!\n    return guess;\n} else if (guess * guess < n) { // too low\n    return sqrtHelper(n, guess + 1, max); // try higher\n} else {\n    return sqrtHelper(n, min, guess - 1); // try lower\n}\n} ",
+      "language": "javascript",
+      "answers": [
+        "O(log N)",
+        "O(N)",
+        "O(N^2)"
+      ],
+      "correct": 0
+    },
+    {
+      "code": "function sqrt(n) {\n  for (let guess = 1; guess * guess <= n; guess++) {\n    if (guess * guess === n) {\n      return guess;\n}\n}\n  return -1;\n}",
+      "language": "javascript",
+      "answers": [
+        "O(sqrt(N))",
+        "O(N)",
+        "O(N^2)"
+      ],
+      "correct": 0
+    },
+    {
+      "code": "function sumDigits(n) {\n  let sum = 0;\n  while (n > 0) {\n    sum += n % 10;\n    n = Math.floor(n / 10);\n}\n  return sum;\n}",
+      "language": "javascript",
+      "answers": [
+        "O(log N)",
+        "O(N)",
+        "O(N^2)"
+      ],
+      "correct": 0
+    },
+    {
+      "code": "function copyArray(array) {\nlet copy = [];\nfor (let value of array) {\ncopy = appendToNew(copy, value);\n}\nreturn copy;\n}",
+      "language": "javascript",
+      "answers": [
+        "O(1)",
+        "O(N)",
+        "O(N^2)"
+      ],
+      "correct": 2
+    },
+    {
+      "code": "function appendToNew(array, value) {\n  const bigger = new Array(array.length + 1);\n  for (let i = 0; i < array.length; i++) {\n    bigger[i] = array[i];\n}\n  bigger[bigger.length - 1] = value;\n  return bigger;\n}\n",
+      "language": "javascript",
+      "answers": [
+        "O(1)",
+        "O(N)",
+        "O(N^2)"
+      ],
+      "correct": 1
+    },
+    {
+      "code": "function printSortedStrings(remaining) {\nprintSortedStringsHelper(remaining, \"\");\n}",
+      "language": "javascript",
+      "answers": [
+        "O(1)",
+        "O(N)",
+        "O(N^2)"
+      ],
+      "correct": 0
+    },
+    {
+      "code": "function printSortedStringsHelper(remaining, prefix) {\nif (remaining === 0) {\nif (isInOrder(prefix)) {\nconsole.log(prefix);\n}\n} else {\nfor (let i = 0; i < numChars; i++) {\nconst c = ithLetter(i);\nprintSortedStringsHelper(remaining - 1, prefix + c);\n}\n}\n}",
+      "language": "javascript",
+      "answers": [
+        "O(26^N *N)",
+        "O(N)",
+        "O(N^2)"
+      ],
+      "correct": 0
+    },
+    {
+      "code": "function isInOrder(s) {\nfor (let i = 1; i < s.length; i++) {\nconst prev = ithLetterValue(s.charAt(i - 1));\nconst curr = ithLetterValue(s.charAt(i));\nif (prev > curr) {\nreturn false;\n}\n}\nreturn true;\n}",
+      "language": "javascript",
+      "answers": [
+        "O(1)",
+        "O(N)",
+        "O(N^2)"
+      ],
+      "correct": 1
+    },
+    {
+      "code": "function ithLetter(i) {\nreturn String.fromCharCode('a'.charCodeAt(0) + i);\n}\nfunction ithLetterValue(c){\nreturn c.charCodeAt(0) - 'a'.charCodeAt(0);\n}\n",
+      "language": "javascript",
+      "answers": [
+        "O(1)",
+        "O(N)",
+        "O(N^2)"
+      ],
+      "correct": 0
+    },
+    {
+      "code": "function realWorldScenarioAdvanced1(array) {\nlet sum = 0;\nfor (let x of array) {\nsum += x;\n}\nlet average = sum / array.length;\nconsole.log(\"Average: \" + average);\n}\n\nrealWorldScenarioAdvanced1([3,1,4,1,5,9,2,6,5,3,5]);",
+      "language": "javascript",
+      "answers": [
+        "O(1)",
+        "O(N)",
+        "O(N^2)"
+      ],
+      "correct": 1
+    },
+    {
+      "code": "function realWorldScenarioAdvanced2(array) {\nlet sum = 0;\nfor (let x of array) {\nsum += x;\n}\nlet average = sum / array.length;\nfor (let x of array) {\nif (x > average) {\nconsole.log(x + \" is above average\");\n}\n}\n}",
+      "language": "javascript",
+      "answers": [
+        "O(2N)",
+        "O(N)",
+        "O(N^2)"
+      ],
+      "correct": 1
+    },
+    {
+      "code": "function realWorldScenarioIntermediate1(array) {\nlet sum = 0;\nfor (let x of array) {\nsum += x;\n}\nconsole.log(\"Sum: \" + sum);\n}\n\nrealWorldScenarioIntermediate1([3,1,4,1,5,9,2,6,5,3,5]);",
+      "language": "javascript",
+      "answers": [
+        "O(1)",
+        "O(N)",
+        "O(N^2)"
+      ],
+      "correct": 1
+    },
+    {
+      "code": "function realWorldScenarioIntermediate2(array) {\nlet sum = 0;\nfor (let x of array) {\nsum += x;\n}\nlet product = 1;\nfor (let x of array) {\nproduct *= x;\n}\nconsole.log(\"Sum: \" + sum + \", Product: \" + product);\n}\n\nrealWorldScenarioIntermediate2([3,1,4,1,5,9,2,6,5,3,5]);",
+      "language": "javascript",
+      "answers": [
+         "O(2N)",
+        "O(N)",
+        "O(N^2)"
+      ],
+      "correct": 1
+    },
+      {
+      "code": "function realWorldScenarioIntermediate3(array) {\nlet sum = 0;\nfor (let x of array) {\nsum += x;\n}\nconsole.log(\"Sum: \" + sum);\n}\n\nrealWorldScenarioIntermediate3([3,1,4,1,5,9,2,6,5,3,5]);",
+      "language": "javascript",
+      "answers": [
+        "O(1)",
+        "O(N)",
+        "O(N^2)"
+      ],
+      "correct": 1
+    },
+    {
+      "code": "function realWorldScenarioIntermediate4(array) {\nlet sum = 0;\nfor (let x of array) {\nsum += x;\n}\nlet product = 1;\nfor (let x of array) {\nproduct *= x;\n}\nconsole.log(\"Sum: \" + sum + \", Product: \" + product);\n}\n\nrealWorldScenarioIntermediate4([3,1,4,1,5,9,2,6,5,3,5]);",
+      "language": "javascript",
+      "answers": [
+        "O(1)",
+        "O(N)",
+        "O(N^2)"
+      ],
+      "correct": 1
+    },
+    {
+      "code": "function compareAlgorithmsAdvanced5(n) {\nfor (let i = 0; i < n; i++) {\nfor (let j = 0; j < n; j++) {\nfor (let k = 0; k < 10; k++) {\n// some operation\n}\n}\n}\n}\n\ncompareAlgorithmsAdvanced5(10);",
+      "language": "javascript",
+      "answers": [
+        "O(1)",
+        "O(N)",
+        "O(N^2)"
+      ],
+       "correct": 2
+    },
+    {
+      "code": "function compareAlgorithmsAdvanced6(n) {\nfor (let i = 0; i < n; i++) {\nfor (let j = 0; j < n; j++) {\n// some operation\n}\n}\n}\n\ncompareAlgorithmsAdvanced6(10);",
+      "language": "javascript",
+      "answers": [
+        "O(1)",
+        "O(N)",
+        "O(N^2)"
+      ],
+       "correct": 2
+    },
+    {
+      "code": " {/*\nIf a binary search tree is not balanced, \n how long might it take (worst case) \n to find an element in it? \n*/}",
+      "language": "javascript",
+      "answers": [
+        "O(1)",
+        "O(N)",
+        "O(N^2)"
+      ],
+      "correct": 1
+    },
+    {
+      "code": "{/*\nYou are looking for a specific \nvalue in a binary tree, \nbut the tree is not \na binary search tree.\nWhat is the time complexity \nof this?\n*/}",
+      "language": "javascript",
+      "answers": [
+        "O(1)",
+        "O(N)",
+        "O(N^2)"
+      ],
+      "correct": 1
+    },
+    {
+      "code": "{/*\nThe appendToNew method appends \na value to an array by creating \na new, longer array and\nreturning this longer array. \nYou've used the appendToNew \nmethod to create a copyArray\nfunction that repeatedly \ncalls appendToNew. \nHow long does copying \nan array take?\n*/}",
+      "language": "javascript",
+      "answers": [
+        "O(1)",
+        "O(N)",
+        "O(N^2)"
+      ],
+      "correct": 2
+    }
+  ]

@@ -177,7 +177,12 @@ button {
   justify-content: center;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
   gap: 1rem;
+  margin-bottom: 1rem;
+}
+.restarts > * {
+    align-self: center;
 }
 .center-text {
   text-align: center;
@@ -214,7 +219,15 @@ button {
       font-size: 0.9rem;
   }
 }
-
+.greeting{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+.greeting > * {
+  align-self: center;
+ }
 /* Add media query for mobile devices */
 @media (max-width: 600px) {
   .wrapper {
