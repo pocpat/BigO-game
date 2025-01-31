@@ -13,6 +13,7 @@ import ProgressBar from "../components/ProgressBar";
 import Welcome from "../components/Welcome";
 import ToggleButton from "../components/ToggleButton";
 import HomeButton from "../components/HomeButton";
+import FooterCredits from "../components/Footer";
 
 
 function App() {
@@ -120,6 +121,9 @@ function App() {
         )}
         <footer className="footer">
           <ProgressBar progress={progress} />
+<FooterCredits />
+          
+          
         </footer>
         </main>
       </div>

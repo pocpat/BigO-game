@@ -8,6 +8,7 @@ import '../src/toggle.css';
 import logo from '/ekLogo.png';
 import ToggleButton from './ToggleButton';
 import { useState } from 'react';
+import FooterCredits from './Footer';
 
 
 const Welcome = ({ onSelectMode }) => {
@@ -47,6 +48,7 @@ const Welcome = ({ onSelectMode }) => {
             Only the correct answer unlocks the next question
           </p>
         </div>
+        <FooterCredits />
       </div>
     </div>
     </div>

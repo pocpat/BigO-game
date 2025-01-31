@@ -1,3 +1,9 @@
+.progress-container {
+  display: flex;
+  justify-content: center; 
+  width: 100%;
+}
+
 .progress {
   background: rgba(255, 255, 255, 0.1);
   justify-content: flex-start;
@@ -7,11 +13,12 @@
   padding: 0 5px;
   display: flex;
   height: 40px;
-  width: 500px;
+  width: 100%;
+  max-width: 600px; 
+  box-sizing: border-box;
 }
 
 .progress-value {
-  //animation: load 3s normal forwards;
   transition: width 0.5s ease;
   box-shadow: 0 10px 40px -10px #fff;
   border-radius: 100px;
@@ -21,7 +28,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  color: white; /* Adjust text color as needed */
+  color: white; 
   font-weight: bold;
 }
 
@@ -29,6 +36,20 @@
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
-  color: white; /* Adjust text color as needed */
+  color: white; 
   font-weight: bold;
+}
+
+/*  for smaller screens */
+@media (max-width: 600px) {
+  .progress {
+    height: 40px; 
+
+  .progress-value {
+    height: 30px; 
+  }
+
+  .progress-text {
+    font-size: 0.9rem; 
+  }
 }

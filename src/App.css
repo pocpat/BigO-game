@@ -7,7 +7,7 @@
   --border-color: rgb(78, 98, 119);
   --box-shadow: rgba(0, 0, 0, 0.35);
   --progress-bar: rgba(78, 98, 119, 0.5);
-  --stars-color: rgba(255, 255, 255, 0.5);
+  --stars-color: rgba(255, 255, 255, 0.3);
   font-size: 16px;
 }
 
@@ -19,7 +19,7 @@ body.dark-mode {
   --border-color: rgb(163, 207, 255);
   --box-shadow: rgba(255, 255, 255, 0.34);
   --progress-bar: rgba(163, 207, 255, 0.5);
-  --stars-color:   rgba(255, 255, 255, 0.2);
+  --stars-color:   rgba(255, 255, 255, 0.1);
 }
 
 body, #root {
@@ -147,6 +147,7 @@ body {
 .footer {
   display: flex;
   justify-content: space-between;
+  flex-direction: column;
   padding: 0.5rem;
   padding-top: 2rem;
    
@@ -198,7 +199,24 @@ button:active {
   text-align: center;
   width: 100%;
 }
+.footer-credits{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: var(--box-shadow);
+  gap: 0;
+  
+}
+.footer-credits a {
+  color: var(--box-shadow); /* Use your desired color variable */
+ text-decoration: none; /* Remove underline */
+}
 
+.footer-credits a:hover {
+  color: var(--secondary-color); /* Optional: Change color on hover */
+  text-decoration: underline; /* Optional: Add underline on hover */
+}
 /* Responsive adjustments */
 @media (max-width: 768px) {
   .header {

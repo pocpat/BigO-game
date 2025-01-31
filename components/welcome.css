@@ -40,7 +40,7 @@ margin: 0.2rem 0;
 }
 
 .w-select {
-  color: var(--secondary-color);
+  color: var(--border-color);
   font-size: 1.3rem;
   margin-bottom: 3rem; 
   text-align: center;
@@ -71,7 +71,7 @@ margin: 0.2rem 0;
   margin-top: 0.5rem;
   font-size: 1.1rem;
   text-align: center;
-  color: var(--secondary-color);
+  color: var(--border-color);
 }
 .logo {
     display: flex;
