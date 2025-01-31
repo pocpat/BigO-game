@@ -38,9 +38,6 @@ const Question = ({ code, language, answers, correctAnswerIndex, onAnswerClick =
         </SyntaxHighlighter>
       </div>
       <div className="answer-options">
-       {/*  {answers.map((answer, index) => (
-           <button key={index} onClick={() => onAnswerClick(index)}>{answer}</button>
-         ))} */}
 
          {answers.map((answer, index) => (
           <button

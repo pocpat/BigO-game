@@ -1,5 +1,4 @@
-// components/CodeSnippet.jsx
-//import React from 'react';
+
 import PropTypes from 'prop-types';
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
 import { prism } from 'react-syntax-highlighter/dist/esm/styles/prism';
