@@ -1,0 +1,7 @@
+svg.homeBTN {
+    fill: var(--border-color);
+  }
+  
+  svg.homeBTN:hover {
+    fill: var(--secondary-color);
+  }
