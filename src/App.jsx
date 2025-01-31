@@ -37,8 +37,7 @@ function App() {
     setIsDarkMode(!isDarkMode);
   };
 
-  const handleNextQuestion = (selectedAnswerIndex) => {
-    const isCorrect = selectedAnswerIndex === currentQuestion.correct;
+  const handleNextQuestion = (isCorrect) => {
     setUserAnswers((prev) => [...prev, isCorrect]);
 
     if (mode === "normal" || isCorrect) {
