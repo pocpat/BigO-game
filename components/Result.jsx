@@ -1,6 +1,6 @@
     /* eslint-disable react/prop-types*/
     
-    import quizData from '../src/quizeData'
+    import quizData from '../src/quizData.json';
     import './results.css'
     
     const Result = ({userAnswers, resetQuiz =()=>{}}) => {

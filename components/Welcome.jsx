@@ -48,8 +48,9 @@ const Welcome = ({ onSelectMode }) => {
             Only the correct answer unlocks the next question
           </p>
         </div>
-        <FooterCredits />
+        
       </div>
+      <FooterCredits />
     </div>
     </div>
   );
