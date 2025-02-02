@@ -6,15 +6,17 @@ import { useState, useEffect } from "react";
 import "./App.css";
 import "./toggle.css";
 import quizData from "./quizData.json";
-import Question from "../components/Question";
-import StarSky from "../components/SratSky";
-import Result from "../components/Result";
-import ProgressBar from "../components/ProgressBar";
-import Welcome from "../components/Welcome";
-import ToggleButton from "../components/ToggleButton";
-import HomeButton from "../components/HomeButton";
-import FooterCredits from "../components/Footer";
+import loadable from '@loadable/component';
 
+// Dynamically import the Result component
+const Result = loadable(() => import("../components/Result"));
+const Question = loadable(() => import("../components/Question"));
+const StarSky = loadable(() => import("../components/StarSky"));
+const ProgressBar = loadable(() => import("../components/ProgressBar"));
+const Welcome = loadable(() => import("../components/Welcome"));
+const ToggleButton = loadable(() => import("../components/ToggleButton"));
+const HomeButton = loadable(() => import("../components/HomeButton"));
+const FooterCredits = loadable(() => import("../components/Footer"));
 
 function App() {
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
