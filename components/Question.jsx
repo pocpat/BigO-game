@@ -30,7 +30,6 @@ const Question = ({ code, language, answers, correctAnswerIndex, onAnswerClick =
 
   useEffect(() => {
     if (selectedAnswerIndex !== null) {
-      // Delay showing the answer color for a brief period (e.g., 500ms)
       const timeoutId = setTimeout(() => {
         setIsCorrect(null); // Reset correctness state after delay
         setSelectedAnswerIndex(null); // Reset selected answer state
