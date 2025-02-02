@@ -44,7 +44,7 @@
 @media (max-width: 600px) {
   .progress {
     height: 40px; 
-
+  }
   .progress-value {
     height: 30px; 
   }
