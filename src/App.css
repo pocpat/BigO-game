@@ -136,6 +136,26 @@ body {
   word-break: break-word;
 }
 
+/* Add styling for question text */
+.question-text {
+  border: 1px solid var(--border-color);
+  padding: 1rem;
+  box-sizing: border-box;
+  background-color: var(--background-color);
+  border-radius: 5px;
+  min-height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.question-text p {
+  font-size: 1.1rem;
+  line-height: 1.5;
+  text-align: center;
+  margin: 0;
+}
+
 .answer-options {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));

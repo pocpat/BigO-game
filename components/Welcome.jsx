@@ -1,29 +1,19 @@
-
-
-
 import PropTypes from 'prop-types';
 import './welcome.css';
 import '../src/App.css';
 import '../src/toggle.css';
 import logo from '/ekLogo.png';
 import ToggleButton from './ToggleButton';
-import { useState } from 'react';
 import FooterCredits from './Footer';
 
-
-const Welcome = ({ onSelectMode }) => {
-  const [isDarkMode, setDarkMode] = useState(false);
-    const toggleDarkMode = () => {
-        setDarkMode(!isDarkMode);
-        document.body.classList.toggle('dark-mode');
-    };
+const Welcome = ({ onSelectMode, isDarkMode, toggleTheme }) => {
   return (
       <div className="w-wrapper">
          <div className="welcome-top-bar">
                 <div className="logo">
                 <img src={logo} alt="App Logo" />
                 </div>
-          <ToggleButton isDarkMode={isDarkMode} toggleTheme={toggleDarkMode} />
+          <ToggleButton isDarkMode={isDarkMode} toggleTheme={toggleTheme} />
           </div>
     <div className="welcome">
       <div className="w-header">
@@ -36,7 +26,6 @@ const Welcome = ({ onSelectMode }) => {
           <button onClick={() => onSelectMode('normal')}>Perfect Run </button>
           <p className="w-info-text">
           Answer questions, see your result in the end
-           
           </p>
         </div>
         <div className="w-button-item">
@@ -44,11 +33,9 @@ const Welcome = ({ onSelectMode }) => {
           Training Ground 
           </button>
           <p className="w-info-text">
-           
             Only the correct answer unlocks the next question
           </p>
         </div>
-        
       </div>
       <FooterCredits />
     </div>
@@ -58,6 +45,8 @@ const Welcome = ({ onSelectMode }) => {
 
 Welcome.propTypes = {
   onSelectMode: PropTypes.func.isRequired,
+  isDarkMode: PropTypes.bool.isRequired,
+  toggleTheme: PropTypes.func.isRequired,
 };
 
 export default Welcome;

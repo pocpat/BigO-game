@@ -480,7 +480,7 @@
        "correct": 2
     },
     {
-      "code": " {/*\nIf a binary search tree is not balanced, \n how long might it take (worst case) \n to find an element in it? \n*/}",
+      "questionText": "If a binary search tree is not balanced, how long might it take (worst case) to find an element in it?",
       "language": "javascript",
       "answers": [
         "O(1)",
@@ -490,7 +490,7 @@
       "correct": 1
     },
     {
-      "code": "{/*\nYou are looking for a specific \nvalue in a binary tree, \nbut the tree is not \na binary search tree.\nWhat is the time complexity \nof this?\n*/}",
+      "questionText": "You are looking for a specific value in a binary tree, but the tree is not a binary search tree. What is the time complexity of this?",
       "language": "javascript",
       "answers": [
         "O(1)",
@@ -500,7 +500,7 @@
       "correct": 1
     },
     {
-      "code": "{/*\nThe appendToNew method appends \na value to an array by creating \na new, longer array and\nreturning this longer array. \nYou've used the appendToNew \nmethod to create a copyArray\nfunction that repeatedly \ncalls appendToNew. \nHow long does copying \nan array take?\n*/}",
+      "questionText": "The appendToNew method appends a value to an array by creating a new, longer array and returning this longer array. You've used the appendToNew method to create a copyArray function that repeatedly calls appendToNew. How long does copying an array take?",
       "language": "javascript",
       "answers": [
         "O(1)",

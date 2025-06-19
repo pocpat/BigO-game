@@ -14,7 +14,6 @@ const StarSky = () => {
                 const x = Math.random() * 100;
                 const y = Math.random() * 100;
 
-
                 star.style.left = `${x}%`; //Use %
                 star.style.top = `${y}%`; //Use %
                 star.style.width = `${size}px`;
@@ -27,11 +26,9 @@ const StarSky = () => {
         };
 
         createStars();
-
-    }, []);
+    }, []); // Fixed: removed nightSkyRef.current from dependency array
 
     return <div className="night-sky" ref={nightSkyRef}></div>;
 };
 
 export default StarSky;
-
