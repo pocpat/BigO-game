@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import { prism } from "react-syntax-highlighter/dist/esm/styles/prism";
 
-const Question = ({ code, language, answers, correctAnswerIndex, onAnswerClick = () => {} }) => {
+const Question = ({ code, questionText, language, answers, correctAnswerIndex, onAnswerClick = () => {} }) => {
   const [selectedAnswerIndex, setSelectedAnswerIndex] = React.useState(null);
   const [isCorrect, setIsCorrect] = React.useState(null);
 
@@ -41,11 +41,19 @@ const Question = ({ code, language, answers, correctAnswerIndex, onAnswerClick =
 
   return (
     <div>
-      <div className="code-snippet">
-        <SyntaxHighlighter language={language} style={prism} wrapLongLines={true}>
-          {code}
-        </SyntaxHighlighter>
-      </div>
+      {/* Conditionally render either code snippet or question text */}
+      {code ? (
+        <div className="code-snippet">
+          <SyntaxHighlighter language={language} style={prism} wrapLongLines={true}>
+            {code}
+          </SyntaxHighlighter>
+        </div>
+      ) : questionText ? (
+        <div className="question-text">
+          <p>{questionText}</p>
+        </div>
+      ) : null}
+      
       <div className="answer-options">
         {shuffledAnswers.map(({ value }, index) => (
           <button
@@ -68,7 +76,8 @@ const Question = ({ code, language, answers, correctAnswerIndex, onAnswerClick =
 };
 
 Question.propTypes = {
-  code: PropTypes.string.isRequired,
+  code: PropTypes.string,
+  questionText: PropTypes.string,
   language: PropTypes.string.isRequired,
   answers: PropTypes.arrayOf(PropTypes.string).isRequired,
   onAnswerClick: PropTypes.func.isRequired,
